@@ -210,6 +210,13 @@
           "good": "Good",
           "severe": "Severe"
         }
+      },
+      "tracking_mode": {
+        "range": {
+          "simple": "Simple",
+          "normal": "Normal",
+          "powerful": "Powerful"
+        }
       }
     }
   }
