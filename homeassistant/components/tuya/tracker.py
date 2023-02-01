@@ -43,7 +43,7 @@ async def async_setup_entry(
 
 class TuyaTrackerEntity(TuyaEntity, StateTrackerEntity):
     """Tuya Tracker Device."""
-    """Below is mostly still vacuum template......."""
+    """Below is mostly still vacuum template..."""
     
     _battery_level: IntegerTypeData | None = None
 
@@ -123,22 +123,6 @@ class TuyaTrackerEntity(TuyaEntity, StateTrackerEntity):
     def turn_on(self, **kwargs: Any) -> None:
         """Turn the device on."""
         self._send_command([{"code": DPCode.POWER, "value": True}])
-
-    def turn_off(self, **kwargs: Any) -> None:
-        """Turn the device off."""
-        self._send_command([{"code": DPCode.POWER, "value": False}])
-
-    def start(self, **kwargs: Any) -> None:
-        """Start the device."""
-        self._send_command([{"code": DPCode.POWER_GO, "value": True}])
-
-    def stop(self, **kwargs: Any) -> None:
-        """Stop the device."""
-        self._send_command([{"code": DPCode.POWER_GO, "value": False}])
-
-    def pause(self, **kwargs: Any) -> None:
-        """Pause the device."""
-        self._send_command([{"code": DPCode.POWER_GO, "value": False}])
 
     def return_to_base(self, **kwargs: Any) -> None:
         """Return device to dock."""
