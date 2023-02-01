@@ -69,6 +69,7 @@ PLATFORMS = [
     Platform.SENSOR,
     Platform.SIREN,
     Platform.SWITCH,
+    Platform.TRACKER,
     Platform.VACUUM,
 ]
 
